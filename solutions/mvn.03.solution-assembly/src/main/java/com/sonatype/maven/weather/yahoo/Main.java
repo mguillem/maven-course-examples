@@ -12,7 +12,7 @@ public class Main {
 		PropertyConfigurator.configure(Main.class.getClassLoader().getResource(	"log4j.properties"));
 
 		// Read the searched location from the Command-line (if none supplied, use 11201 for New York City)
-		String location = "11201";
+		String location = "köln";
 		if (args != null && args.length > 0) {
 			location = args[0];
 		}
