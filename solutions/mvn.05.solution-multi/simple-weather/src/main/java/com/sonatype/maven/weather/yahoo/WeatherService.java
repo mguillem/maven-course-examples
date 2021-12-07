@@ -9,10 +9,10 @@ public class WeatherService {
 
     public String retrieveForecast( String zip ) throws Exception {
         // Retrieve Data
-        try (InputStream dataIn = new YahooRetriever().retrieve(zip)) {
+        try (InputStream dataIn = new VisualCrossingRetriever().retrieve(zip)) {
 
             // Parse Data
-            Weather weather = new YahooParser().parse(dataIn);
+            Weather weather = new VisualCrossingParser().parse(dataIn);
 
             // Format (Print) Data
             return new WeatherFormatter().format(weather);

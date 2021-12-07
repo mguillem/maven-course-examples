@@ -7,6 +7,11 @@
 	<packaging>pom</packaging>
 	<name>mvn.05.solution-multi</name>
 	<description>Simple Weather Parent - Lösung zu Übungsaufgabe 5 mit Integrationstest</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<build>
 		<pluginManagement>
 			<plugins>

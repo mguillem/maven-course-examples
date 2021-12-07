@@ -8,6 +8,7 @@ This:
 - deploys artefacts to the local directory
 
 Web-server can be started in `simple-webapp` folder:
+
 ```
 mvn jetty:run
 ```
