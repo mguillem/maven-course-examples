@@ -3,9 +3,11 @@
 	<property name="test-src" location="test-src" />
 	<property name="build" location="bin" />
 	<property name="build-test" location="bin-test" />
+	<property name="encoding" value="UTF-8" />
+	<property name="testReportsDir" value="test-reports" />
 
 	<target name="init">
-		<tstamp/>
+		<tstamp />
 		<mkdir dir="${build}" />
 		<mkdir dir="${build-test}" />
 	</target>
@@ -20,23 +22,57 @@
 	</target>
 
 	<target name="compile.main" depends="init" description="compiles main code">
-		<javac srcdir="${src}" destdir="${build}" includeantruntime="false" classpathref="libraries" />
+		<javac srcdir="${src}" destdir="${build}" includeantruntime="false" classpathref="libraries" encoding="${encoding}" source="1.8" target="1.8"/>
+		<copy todir="${build}" encoding="${encoding}">
+			<fileset dir="${src}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
 	</target>
 
-	<target name="compile.test" depends="init" description="compiles test code">
-		<javac srcdir="${test-src}" destdir="${build-test}" includeantruntime="false" classpathref="libraries" >
+	<target name="compile.test" depends="compile.main" description="compiles test code">
+		<javac srcdir="${test-src}" destdir="${build-test}" includeantruntime="false" classpathref="libraries" encoding="${encoding}" source="1.8" target="1.8">
 			<classpath>
-				<dirset dir="${build}"/>
+				<dirset dir="${build}" />
 			</classpath>
 		</javac>
+		<copy todir="${build-test}" encoding="${encoding}">
+			<fileset dir="${test-src}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
 	</target>
 
-	<target name="dist" depends="compile" description="Creates jar file">
-		<jar jarfile="MyProject-${DSTAMP}.jar" basedir="${build}" />
+	<target name="junit" depends="compile.test">
+		<mkdir dir="${testReportsDir}" />
+		<junit printsummary="yes" haltonfailure="yes">
+			<classpath>
+				<fileset dir="lib">
+					<include name="**/*.jar" />
+				</fileset>
+				<pathelement location="${build}" />
+				<pathelement location="${build-test}" />
+			</classpath>
+
+			<formatter type="plain" />
+			<batchtest fork="yes" todir="test-reports">
+				<fileset dir="${test-src}">
+					<include name="**/*Test*.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+	<target name="dist" depends="junit" description="Creates jar file">
+		<jar jarfile="MyProject.jar" basedir="${build}" />
 	</target>
 
 	<target name="clean" description="clean up">
 		<delete dir="${build}" />
 		<delete dir="${build-test}" />
+		<delete dir="${testReportsDir}" />
+		<delete>
+			<fileset dir="." includes="MyProject.jar" />
+		</delete>
 	</target>
 </project>

@@ -69,7 +69,7 @@
 				<directory>src/test/resources</directory>
 				<filtering>true</filtering>
 				<includes>
-					<include>**/*.xml</include>
+					<include>**/*.json</include>
 					<include>**/*.dat</include>
 				</includes>
 			</testResource>

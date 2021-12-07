@@ -8,19 +8,19 @@ import org.apache.commons.io.IOUtils;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
-import com.sonatype.maven.weather.yahoo.YahooRetriever;
+import com.sonatype.maven.weather.yahoo.VisualCrossingRetriever;
 
-public class YahooRetrieverTest {
+public class VisualCrossingRetrieverTest {
 
 	@Test
 	public void simpleTest() throws Exception {
-		YahooRetriever yahooRetriever = new YahooRetriever();
+		VisualCrossingRetriever retriever = new VisualCrossingRetriever();
 		final String content;
-		try (InputStream is = yahooRetriever.retrieve("bonn,germany")) {
+		try (InputStream is = retriever.retrieve("köln")) {
 			content = IOUtils.toString(is);	
 		}
 
-		assertThat(content, CoreMatchers.containsString("Yahoo! Weather - Bonn, NW, DE"));
+		assertThat(content, CoreMatchers.containsString("Köln, Nordrhein-Westfalen, Deutschland"));
 	}
 
 }
