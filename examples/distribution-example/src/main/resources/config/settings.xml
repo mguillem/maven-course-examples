@@ -15,7 +15,7 @@
 		<server>
 			<id>my-scm-server</id>
 			<username>maven-course</username>
-			<password>secret</password>
+			<password>Test-1</password>
 		</server>
 	</servers>
 	<mirrors>
