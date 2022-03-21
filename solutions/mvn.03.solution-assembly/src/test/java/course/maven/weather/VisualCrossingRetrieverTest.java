@@ -1,4 +1,4 @@
-package course.maven.weather.yahoo;
+package course.maven.weather;
 
 import static org.junit.Assert.assertThat;
 
