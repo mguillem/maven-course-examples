@@ -7,10 +7,6 @@ import java.io.InputStream;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
-import course.maven.weather.VisualCrossingParser;
-import course.maven.weather.Weather;
-import course.maven.weather.WeatherFormatter;
-
 public class WeatherFormatterTest {
 
 	@Test

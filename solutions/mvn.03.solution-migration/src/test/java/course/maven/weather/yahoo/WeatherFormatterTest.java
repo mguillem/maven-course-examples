@@ -19,6 +19,6 @@ public class WeatherFormatterTest {
 		Weather weather = new VisualCrossingParser().parse(nyData);
 		String formattedResult = new WeatherFormatter().format(weather);
 		InputStream expected = getClass().getClassLoader().getResourceAsStream("format-expected.dat");
-		assertEquals(IOUtils.toString(expected), formattedResult);
+		assertEquals(IOUtils.toString(expected, "UTF-8"), formattedResult);
 	}
 }
