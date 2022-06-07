@@ -2,16 +2,14 @@
 
 To use this example to exercise release deployment, following needs to be setup previously:
 - a Nexus server
-- a Git server with this example project in a repository (reachable with the credentials maven-course/secret) 
+- a Git server with this example project in a repository
 
 
 # Deploying to Nexus Repository Manager 
 
 To deploy the build artifact a running instance of Nexus Repository OSS or Pro is required.
-
-To use the provided Maven `settings.xml` with the Nexus default accounts run Maven with:
 			
-    mvn -s src/main/resources/config/settings.xml deploy
+    mvn deploy
  
 ## Using docker to run Nexus Repository Manager
 

@@ -7,6 +7,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>distribution-example</name>
 	<description>Example using local nexus repository for deployment</description>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
@@ -25,22 +26,18 @@
 	</dependencies>
 	<scm>
 		<developerConnection>
-			scm:git:http://${GIT_SERVER}/maven-course/distribution-example.git
+			scm:git:http://##define-me##/git-user/distribution-example.git
 		</developerConnection>
 	</scm>
 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus-Repository</name>
-			<url>http://${NEXUS_SERVER}/repository/maven-releases</url>
+			<url>http://##define-me##/repository/maven-releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
-			<url>http://${NEXUS_SERVER}/repository/maven-snapshots</url>
+			<url>http://##define-me##/repository/maven-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-	<build>
-		<!-- Simply run: mvn -s src/main/resources/config/settings.xml deploy -->
-		<defaultGoal>deploy</defaultGoal>
-	</build>
 </project>
