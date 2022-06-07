@@ -8,8 +8,7 @@
 	</parent>
 	<artifactId>mvn.05.solution-simple-webapp</artifactId>
 	<packaging>war</packaging>
-	<name>Simple Weather Web Application with Integration Tests</name>
-	<url>http://localhost:8088/</url>
+
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
