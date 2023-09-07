@@ -1,13 +1,13 @@
 # Usage
 
 ```
-mvn exec:java -Dexec.mainClass=com.sonatype.maven.weather.yahoo.Main -Dexec.args="#some location#"
+mvn exec:java -Dexec.mainClass=course.maven.weather.Main -Dexec.args="#some location#"
 ```
 
 Example:
 
 ```
-$> mvn exec:java -Dexec.mainClass=com.sonatype.maven.weather.yahoo.Main -Dexec.args="Rennes,France"
+$> mvn exec:java -Dexec.mainClass=course.maven.weather.Main -Dexec.args="Rennes,France"
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ----------< maven.course.solutions:mvn.03.solution-migration >----------

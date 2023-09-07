@@ -15,6 +15,6 @@ ant dist
 Aufruf 
 
 ```
-java -classpath 'MyProject.jar:lib/*' com.sonatype.maven.weather.yahoo.Main
+java -classpath 'MyProject.jar:lib/*' course.maven.weather.Main
 
 ```
