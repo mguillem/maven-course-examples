@@ -4,10 +4,10 @@ mvn install
 ```
 This:
 - builds the subprojects
-- execute the tests (including integration tests)
-- deploys artefacts to the local directory
+- executes the tests (including integration tests)
+- installs artefacts in the local maven repository
 
-Web-server can be started in `simple-webapp` folder:
+A web-server can be started in `simple-webapp` folder:
 
 ```
 mvn jetty:run
