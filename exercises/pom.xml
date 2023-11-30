@@ -10,9 +10,6 @@
   <description>Exercises Labs workspace</description>
   <modules>
     <module>jaxws-code-generation</module>
-    <!-- 
-    <module>jaxws-fraction-build-cylce</module>
-    -->
     <module>jpa-filtering-exercise</module>
     <module>mvn.05.exercise-multi/simple-weather</module>
     <module>mvn.05.exercise-multi/simple-webapp</module>
