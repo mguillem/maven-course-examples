@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>maven.course</groupId>
@@ -16,9 +16,11 @@
     <module>ejbs</module>
     <module>git-scm-example</module>
     <module>jarsigner-example</module>
+    <!-- 
     <module>jaxb-code-generation</module>
     <module>jpa-code-generation</module>
     <module>jpa-filtering</module>
+    -->
     <module>local-scm</module>
     <module>maven-parent</module>
     <module>maven-profiles</module>
@@ -27,13 +29,16 @@
     <module>custom-uppercase-plugin-usage</module>
     <module>proficio</module>
     <module>project-pattern-archetype</module>
+    <!-- 
     <module>reports</module>
+    -->
     <module>simple-release</module>
     <module>spring-bom</module>
     <module>touch-maven-plugin</module>
-    <!-- pom that is not is xml breaks the build (with Maven 3.6.2) => call mvn directly in module
+    <!-- pom that is not in xml breaks the build (with Maven 3.6.2) => call mvn directly in module
     <module>polyglot</module>
      -->
+    <module>git-commit-id-example</module>
   </modules>
   <profiles>
    	<profile>
