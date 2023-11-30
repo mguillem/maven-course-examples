@@ -9,7 +9,7 @@
 	<description>Proficio sample application from "Better Builds with Maven"</description>
 	<properties>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <java.version>1.7</java.version>
+      <java.version>17</java.version>
 	</properties>             
 	
 	<modules>
@@ -97,7 +97,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.0.1</version>
+            <version>3.6.2</version>
             <configuration>
               <doclint>none</doclint>
             </configuration>
@@ -145,7 +145,7 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.0.1</version>
+            <version>3.6.2</version>
             <configuration>
                 <aggregate>true</aggregate>
                 <doclint>none</doclint>
@@ -222,7 +222,7 @@
          <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>3.6.2</version>
           <configuration>
               <doclint>none</doclint>
           </configuration>
@@ -234,7 +234,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.6.2</version>
                 <configuration>
                     <doclint>none</doclint>
                 </configuration>

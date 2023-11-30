@@ -9,6 +9,12 @@
   <name>project-pattern-archetype-example</name>
   <description>Example for a custom archetype</description>
 
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.source>${java.version}</maven.compiler.source>
+	<maven.compiler.target>${java.version}</maven.compiler.target>
+  </properties>
+
   <build>
     <extensions>
       <extension>

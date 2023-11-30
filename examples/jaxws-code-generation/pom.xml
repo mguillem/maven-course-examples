@@ -118,7 +118,7 @@
 				<!-- https://www.soapui.org/test-automation/maven/maven-2-x.html -->
 				<groupId>com.smartbear.soapui</groupId>
 				<artifactId>soapui-maven-plugin</artifactId>
-				<version>5.4.0</version>
+				<version>5.7.2</version>
 				<configuration>
 					<outputFolder>${project.build.directory}/soapui</outputFolder>
 					<junitReport>true</junitReport>

@@ -13,7 +13,6 @@
     <module>mvn.02.solution</module>
     <module>mvn.03.solution-assembly</module>
     <module>mvn.03.solution-migration</module>
-    <module>mvn.03.solution-profile</module>
     <module>mvn.04.solution-webapp</module>
     <module>mvn.05.solution-multi</module>
   </modules>

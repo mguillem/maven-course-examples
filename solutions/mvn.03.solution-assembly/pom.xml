@@ -43,6 +43,14 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<argLine>-Duser.language=de</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>3.3.0</version>
 				<executions>
@@ -55,7 +63,6 @@
 							<descriptors>
 								<descriptor>src/assembly/bundle-assembly.xml</descriptor>
 							</descriptors>
-							<finalName>${project.artifactId}-${project.version}</finalName>
 						</configuration>
 						<phase>package</phase>
 						<goals>

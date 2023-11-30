@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
@@ -26,14 +26,13 @@
   
     <build>
         <defaultGoal>verify</defaultGoal>
-        <plugins>
+        <plugins> 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.3.0</version>
                 <executions>
                     <execution>
-                        <phase>initialize</phase>
                         <goals>
                             <goal>jar</goal>
                             <goal>test-jar</goal>
@@ -41,11 +40,10 @@
                     </execution>
                 </executions>
             </plugin>
-          
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jarsigner-plugin</artifactId>
-                <version>1.4</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>sign</id>

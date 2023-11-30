@@ -10,6 +10,8 @@
 	<url>http://localhost:8080/drools-guvnor-5.1.1/</url>
 	<properties>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<tomcat.version>8.0.52</tomcat.version>
 		<main.class>de.crowdcode.maven.assembly.App</main.class>
 		<application.name>${project.name}</application.name>
@@ -59,7 +61,6 @@
 					<descriptors>
 						<descriptor>src/assembly/deployment-assembly.xml</descriptor>
 					</descriptors>
-					<finalName>deployment</finalName>
 				</configuration>
 				<executions>
 					<execution>
@@ -88,7 +89,7 @@
 					<programs>
 						<program>
 							<mainClass>${main.class}</mainClass>
-							<name>${application.name}</name>
+							<id>${application.name}</id>
 						</program>
 					</programs>
 					<copyConfigurationDirectory>true</copyConfigurationDirectory>
