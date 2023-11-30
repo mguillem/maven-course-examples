@@ -1,0 +1,19 @@
+name: Java 17 CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Maven Action
+      uses: s4u/setup-maven-action@v1.7.0
+      with:
+        java-version: 17
+        java-distribution: temurin
+        maven-version: 3.9.3
+    - name: Show Maven version
+      run: mvn -version
+    - name: Build with Maven
+      run: mvn -B verify
