@@ -16,11 +16,6 @@
     <module>ejbs</module>
     <module>git-scm-example</module>
     <module>jarsigner-example</module>
-    <!-- 
-    <module>jaxb-code-generation</module>
-    <module>jpa-code-generation</module>
-    <module>jpa-filtering</module>
-    -->
     <module>local-scm</module>
     <module>maven-parent</module>
     <module>maven-profiles</module>
